@@ -8,7 +8,7 @@ const SobreMim = () => {
         <div className="w3-col m6 w3-padding-large w3-hide-small">
           <img
             src={Sobre}
-            className="w3-round w3-image w3-opacity-min"
+            className="w3-round w3-image"
             alt="Table Setting"
             width="600"
             height="750"
@@ -26,7 +26,7 @@ const SobreMim = () => {
             urna ornare leo use
             <span className="w3-tag w3-light-grey">skdsie</span> kkgfddjs.
           </p>
-          <p className="w3-large w3-text-grey w3-hide-medium">
+          <p className="w3-large w3-text-grey w3-hide-medium w3-hide-small">
             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
             officia deserunt mollit anim id est laborum consectetur adipiscing
             elit, sed do eiusmod temporincididunt ut labore et dolore magna
@@ -36,7 +36,6 @@ const SobreMim = () => {
         </div>
       </div>
       <hr />
-
     </>
   )
 }
