@@ -1,27 +1,22 @@
 import './Header.css';
+import Cidade from '../../assets/20220528_175742.jpg';
 
 const Header = () => {
   return (
     <>
-    <div className="w3-top">
-    <div
-      className="w3-bar w3-white w3-card">
-      <a href="#home" className="w3-bar-item w3-button"
-        ><img src="../logo-vd.png" alt="Logo iTherapeutic" /></a>
-       
-      <div className="w3-display-topright nav-tel w3-margin-right w3-hide-medium w3-hide-small">
-        <p><em>Ligue para agendar uma consulta: (13) 99999-8888</em></p>
+    <header className="w3-display-container w3-content w3-wide" id="home">
+      <img
+        className="w3-image"
+        src={Cidade}
+        alt="Foto de cidade"
+        width="1600"
+        height="800"
+      />
+      <div className="w3-display-bottomleft w3-padding-large w3-opacity">
+        <h1 className="w3-xxlarge w3-text-white">Terapeuta da Silva</h1>
       </div>
-
-      <div className="w3-display-bottomright nav-text w3-hide-medium w3-hide-small w3-text-green w3-margin-bottom">
-        <a href="#about" className="w3-bar-item w3-button">Sobre</a>
-        <a href="#menu" className="w3-bar-item w3-button">Terapias</a>
-        <a href="#schedule" className="w3-bar-item w3-button">Agendar</a>
-        <a href="#contact" className="w3-bar-item w3-button">Contato</a>
-      </div>
-    </div>
-  </div>
-  </>
+    </header>
+    </>
   )
 }
 

@@ -1,0 +1,9 @@
+/* Header */
+.nav-text {
+    letter-spacing: 4px;
+    font-weight: bold;
+  }
+  
+  .nav-tel {
+    font-weight: 300;
+  }
