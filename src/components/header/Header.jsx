@@ -9,8 +9,7 @@ const Header = () => {
         className="w3-image"
         src={Cidade}
         alt="Foto de cidade"
-        width="1600"
-        height="800"
+        style={{width: '100%'}}
       />
       <div className="w3-display-bottomleft w3-padding-large w3-opacity">
         <h1 className="w3-xxlarge w3-text-white">Terapeuta da Silva</h1>
