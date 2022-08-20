@@ -5,6 +5,7 @@ import SobreMim from './components/sobre/SobreMim';
 import Terapias from './components/terapias/Terapias';
 import Agendar from './components/agendar/Agendar';
 import Contato from './components/contato/Contato';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Agendar />
       <Contato />
     </div>
+    <Footer />
     </>
   );
 }
