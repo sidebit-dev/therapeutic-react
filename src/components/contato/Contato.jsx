@@ -1,9 +1,28 @@
-
+import { useState } from "react";
+import "./Contato.css";
 
 const Contato = () => {
+  //Gerenciamento de dados
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  console.log(name, email, message);
+  // Validação
+  // envio
+  // Reset do formulário
+  setName('');
+  setEmail('');
+  setMessage('');
+}
+
+
+
   return (
     <>
-    <div className="w3-container w3-padding-64" id="contact">
+      <div className="w3-container w3-padding-64" id="contact">
         <h1 className="w3-text-green">Contato</h1>
         <br />
         <p>
@@ -19,43 +38,49 @@ const Contato = () => {
           Você pode contatar pelo whatsapp 1199999-3333 ou e-mail
           terapeuta@terapeuta.com, ou você pode enviar uma mensagem aqui:
         </p>
-        <form action="/action_page.php" target="_blank">
-          <p>
+        <form onSubmit={handleSubmit}>
+          <label className="w3-margin-top">
+            <span>Nome:</span>
             <input
               className="w3-input w3-padding-16"
               type="text"
-              placeholder="Nome"
+              placeholder="Digite seu Nome"
               required
-              name="Name"
+              name="Name" 
+              onChange={(e) => setName(e.target.value)}
+              value={name}
             />
-          </p>
-          <p>
+          </label>
+          <label className="w3-margin-top">
+            <span>E-mail:</span>
             <input
               className="w3-input w3-padding-16"
               type="email"
-              placeholder="E-mail"
+              placeholder="Digite seu E-mail"
               required
               name="email"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
             />
-          </p>
-          <p>
-            <input
+          </label>
+          <label className="w3-margin-top">
+            <span>Digite sua mensagem:</span>
+            <textarea
               className="w3-input w3-padding-16"
-              type="text"
               placeholder="Mensagem \ Campo obrigatório.."
               required
-              name="Message"
-            />
-          </p>
-          <p>
-            <button className="w3-button w3-green w3-section" type="submit">
+              name="message"
+              onChange={(e) => setMessage(e.target.value)}
+              value={message}
+            ></textarea>
+          </label>        
+            <button className="w3-button w3-green w3-section w3-margin-top" type="submit">
               ENVIAR
-            </button>
-          </p>
+            </button>     
         </form>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Contato
+export default Contato;
